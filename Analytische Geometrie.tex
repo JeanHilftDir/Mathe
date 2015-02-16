@@ -1,0 +1,61 @@
+\documentclass[11pt]{beamer}
+\usetheme{default}
+
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+%\author{JeanHilftDir}
+\title{Mathe Nachhilfe}
+\subtitle{3D Koordinatensystem}
+%\logo{}
+%\institute{}
+\date{}
+%\subject{}
+%\setbeamercovered{transparent}
+\setbeamertemplate{navigation symbols}{}
+
+\begin{document}
+	\maketitle
+	
+	\begin{frame}
+		\frametitle{Analytische Geometrie}
+		\begin{tikzpicture}[]
+		\draw[style=help lines,step=1cm] (0,0,0) grid (5,5,0);
+		
+		
+		\draw[->, >=latex] (0,0,0) -- (5,0,0) node[below]{$y$};
+		\draw[->, >=latex] (0,0,0) -- (0,5,0) node[left]{$z$};
+		\draw<3->[->, >=latex] (0,0,0) -- (0,0,5) node[left]{$x$};
+		
+		\draw (0,0,0) -- (0,-.1,0) node[below]{$\scriptstyle0$};
+		\foreach \x in {1,2,3,4}
+			\draw (\x,-.1,0) -- (\x,.1,0) node[below=4pt] {$\scriptstyle\x$};
+		\foreach \x in {1,2,3,4,5}
+			\draw<3->[style=help lines] (\x,0,0) -- (\x,0,5);
+		\foreach \y in {1,2,3,4}
+			\draw (-.1,\y,0) -- (.1,\y,0) node[left=4pt] {$\scriptstyle\y$};
+		\foreach \y in {1,2,3,4,5}
+			\draw<3->[style=help lines] (0,\y,0) -- (0,\y,5);
+		\foreach \z in {1,2,3,4}
+			\draw<3-> (-.1,.1,\z) -- (.1,-.1,\z) node[right,below] {$\scriptstyle\z$};
+		\foreach \z in {1,2,3,4,5}
+			\draw<3->[style=help lines] (0,0,\z) -- (0,5,\z);
+		\foreach \z in {1,2,3,4,5}
+			\draw<3->[style=help lines] (0,0,\z) -- (5,0,\z);
+		
+		\coordinate<2->[label=right:$P$] (P) at (1.615,1.615,0);
+		\fill<2-> (P) circle (2pt);
+		
+		\draw<4->[color=blue, line width=2pt] (0,0,0) --(1.615,0,0);
+		\draw<5->[color=blue, line width=2pt] (1.615,0,0) --(1.615,1.615,0);
+		
+		\draw<6->[color=green, line width=2pt] (0,0,0) --(0,0,1);
+		\draw<7->[color=green, line width=2pt] (0,0,1) --(2,0,1);
+		\draw<8->[color=green, line width=2pt] (2,0,1) --(2,2,1);
+		
+		\end{tikzpicture}
+		
+	\end{frame}
+\end{document}

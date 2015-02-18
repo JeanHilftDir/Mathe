@@ -1,0 +1,163 @@
+\documentclass[11pt, aspectratio=169]{beamer}
+\usetheme{default}
+
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[absolute,overlay]{textpos}
+
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+%\author{JeanHilftDir}
+\title{Mathe Nachhilfe}
+\subtitle{Analytische Geometrie - Vektoren}
+%\logo{}
+%\institute{}
+\date{}
+%\subject{}
+%\setbeamercovered{transparent}
+\setbeamertemplate{navigation symbols}{}
+
+\definecolor{lightblue}{RGB}{55,96,146}
+\newcommand{\coord}{
+		% draw help lines
+		%\foreach \x in {.5,1,1.5,2,2.5,3,3.5,4,4.5,5}
+		%	\draw[style=help lines] (\x,0,0) -- (\x,0,5);
+		%\foreach \x in {.5,1,1.5,2,2.5,3,3.5,4,4.5,5}
+		%	\draw[style=help lines] (\x,0,0) -- (\x,5,0);
+		%\foreach \y in {.5,1,1.5,2,2.5,3,3.5,4,4.5,5}
+		%	\draw[style=help lines] (0,\y,0) -- (0,\y,5);
+		%\foreach \y in {.5,1,1.5,2,2.5,3,3.5,4,4.5,5}
+		%	\draw[style=help lines] (0,\y,0) -- (5,\y,0);
+		%\foreach \z in {.5,1,1.5,2,2.5,3,3.5,4,4.5,5}
+		%	\draw[style=help lines] (0,0,\z) -- (0,5,\z);
+		%\foreach \z in {.5,1,1.5,2,2.5,3,3.5,4,4.5,5}
+		%	\draw[style=help lines] (0,0,\z) -- (5,0,\z);
+		
+		% draw Axes
+		\draw[thick,->] (0,0,0) -- (5,0,0) node[below]{$y$};
+		\draw[thick,->] (0,0,0) -- (0,5,0) node[left]{$z$};
+		\draw[thick,->] (0,0,0) -- (0,0,5) node[left]{$x$};
+		
+		% draw labels
+		\draw (0,0,0) -- (0,-.1,0) node[below]{$\scriptstyle0$};
+		\foreach \x in {1,2,3,4}
+			\draw (\x,-.1,0) -- (\x,.1,0) node[below=4pt] {$\scriptstyle\x$};
+		\foreach \y in {1,2,3,4}
+			\draw (-.1,\y,0) -- (.1,\y,0) node[left=4pt] {$\scriptstyle\y$};
+		\foreach \z in {1,2,3,4}
+			\draw (-.1,.1,\z) -- (.1,-.1,\z) node[right,below] {$\scriptstyle\z$};
+	}
+\newcommand{\lastslide}{
+		\begin{frame}
+			\only<2->{
+				\begin{textblock}{5}(0.5,3.5)
+					\includegraphics[width=5cm]{graphix/subpointer.png}
+				\end{textblock}
+			}
+			\only<3->{
+				\begin{textblock}{7}(8.5,0)
+					\begin{flushright}
+						\color{lightblue}\Large
+						facebook.com/JeanHilftDir\\
+						Skype: JeanHilftDir
+					\end{flushright}
+				\end{textblock}
+				\begin{textblock}{9}(6.5,4)
+					\begin{flushright}
+						\color{lightblue}\Large
+						Folien: github.com/JeanHilftDir/Mathe\\
+						
+					\end{flushright}
+				\end{textblock}
+			}
+		\end{frame}
+	}
+\AtBeginSection[]{
+		\begin{frame}{Analytische Geometrie - Vektoroperationen}
+			\tableofcontents[currentsection]
+		\end{frame}
+	}
+
+\begin{document}
+	\maketitle
+	\begin{frame}{Analytische Geometrie - Vektoroperationen}
+		\tableofcontents
+	\end{frame}
+	\section{Begriffe}
+	\subsection{Null-, Einheits-, Gegenvektor, Kartesisches Koordinatensystem}
+	\begin{frame}{Nullvektor, Einheitsvektor, Entgegengesetzter Vektor}
+		\textbf{Nullvektor $\vec{o}$:}
+		
+		\textbf{Einheitsvektor:}
+		
+		\textbf{Entgegengesetzter Vektor zu $\vec{a}$:}
+		
+		
+	\end{frame}
+	\subsection{Kollinearität, Linearkombination, Lineare (Un)Abhängigkeit}
+	\lastslide
+	\maketitle
+	\section{Grundrechenarten}
+	\subsection{Addition, Subtraktion}
+	\begin{frame}{Addition, Subtraktion}
+		\begin{columns}[T]
+			\column{.7\textwidth}
+			\begin{tikzpicture}[z=-.5cm]
+			\coord
+			
+			\end{tikzpicture}
+			
+		\end{columns}
+	\end{frame}
+	\subsection{Multiplikation mit Skalar / Skalierung}
+	\begin{frame}{}
+		
+	\end{frame}
+	\lastslide
+	\maketitle
+	\section{Skalarprodukt}
+	\begin{frame}{Berechnung}
+		
+	\end{frame}
+	\subsection{Eigenschaften}
+	\begin{frame}{Eigenschaften}
+		
+	\end{frame}
+	\subsection{Winkel zwischen Vektoren}
+	\begin{frame}{Winkel zwischen Vektoren}
+		
+	\end{frame}
+	\lastslide
+	\maketitle
+	\section{Vektorprodukt / Kreuzprodukt}
+	\begin{frame}{Berechnung}
+		
+	\end{frame}	
+	\subsection{Eigenschaften}
+	\begin{frame}{Eigenschaften}
+		
+	\end{frame}
+	\subsection{Flächeninhalt von Parallelogrammen / Dreiecken}
+	\begin{frame}{Flächeninhalt von Parallelogrammen}
+		
+	\end{frame}
+	\subsection{Flächeninhalt von Dreiecken}
+	\begin{frame}{Flächeninhalt von Dreiecken}
+		
+	\end{frame}
+	\lastslide
+	\maketitle
+	\section{Spatprodukt}
+	\subsection{Spat? WTF?}
+	\begin{frame}{Spat? WTF?}
+		
+	\end{frame}
+	\subsection{Volumen eines Spates}
+	\begin{frame}{Volumen eines Spates}
+		
+	\end{frame}
+	\lastslide
+\end{document}

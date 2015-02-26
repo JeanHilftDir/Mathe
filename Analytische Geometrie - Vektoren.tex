@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage[absolute,overlay]{textpos}
+\usepackage{gensymb}
 
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
@@ -384,25 +385,106 @@
 	\lastslide
 	\maketitle
 	\section{Skalarprodukt}
-	\begin{frame}{Berechnung}
-		
-	\end{frame}
-	\subsection{Eigenschaften}
-	\begin{frame}{Eigenschaften}
-		
+	\begin{frame}{Skalarprodukt - Berechnung}
+		\begin{columns}[t]
+			\column{.5\textwidth}
+			\uncover<3->{$\vec{a} \cdot \vec{b}$ bzw. $\vec{a} \circ \vec{b}$ ist eine Reelle Zahl $c$, für die gilt:\\}
+			\uncover<3->{$c = | \vec{a} | \cdot | \vec{b} | \cdot \cos \sphericalangle ( \vec{a}, \vec{b} ) $\\}
+			\ \\\uncover<2->{$c = x_a \cdot x_b + y_a \cdot y_b + z_a \cdot z_b$\\}
+			\ \\\uncover<4->{\textbf{Eigenschaften:}\\}
+			\begin{itemize}
+				\item<5->$\vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a}$
+				\item<6->$\vec{a} \cdot \left( \vec{b} + \vec{c} \right) = \left( \vec{a} + \vec{b} \right)\cdot \left( \vec{a} + \vec{c} \right)$
+				\item<7->$r\left( \vec{a} \cdot \vec{b} \right) = \left( r\vec{a} \right) \cdot \vec{b} = \vec{a} \cdot \left( r\vec{b} \right)$
+				\item<8->$\vec{a} \bot \vec{b} \Rightarrow \vec{a} \cdot \vec{b} = 0$
+			\end{itemize}
+			\column{.5\textwidth}
+			\uncover<9->{\textbf{Beispiel:}\\}
+			\uncover<10->{$\vec{a} = \left( \begin{array}{c} 2 \\ 4 \\ 5 \end{array} \right)$}
+			\uncover<10->{$\vec{b} = \left( \begin{array}{c} 6 \\ 3 \\ 0 \end{array} \right)$\\}
+			\ \\\uncover<11->{$c = 2 \cdot 6 + 4 \cdot 3 + 5 \cdot 0$}
+			\uncover<12->{$ = 12 + 12 + 0$}
+			\uncover<13->{$ = 24$\\}
+			\ \\\uncover<14->{Stehen $\vec{a}$ und $\vec{b}$ senkrecht zueinander?\\}
+			\uncover<15->{Nein, denn $\vec{a} \cdot \vec{b} \neq 0$}
+		\end{columns}
 	\end{frame}
 	\subsection{Winkel zwischen Vektoren}
 	\begin{frame}{Winkel zwischen Vektoren}
-		
+		\begin{columns}[t]
+			\column{.45\textwidth}
+			\uncover{$\vec{a} \cdot \vec{b}$ bzw. $\vec{a} \circ \vec{b}$ ist eine Reelle Zahl $c$, für die gilt:\\}
+			\uncover{$c = | \vec{a} | \cdot | \vec{b} | \cdot \cos \sphericalangle ( \vec{a}, \vec{b} ) $\\}
+			\ \\\uncover<2->{$\cos \sphericalangle ( \vec{a}, \vec{b} ) = \dfrac{c}{| \vec{a} | \cdot | \vec{b} |}$\\}
+			\ \\\ \\\uncover<3->{$\cos \sphericalangle ( \vec{a}, \vec{b} ) = \dfrac{\vec{a} \cdot \vec{b}}{| \vec{a} | \cdot | \vec{b} |}$\\}
+			\ \\\ \\\uncover<4->{$\sphericalangle ( \vec{a}, \vec{b} ) = \cos^{-1} \left( \dfrac{\vec{a} \cdot \vec{b}}{| \vec{a} | \cdot | \vec{b} |}  \right)$\\}
+			\column{.55\textwidth}
+			\uncover<5->{\textbf{Beispiel:}\\}
+			\uncover<6->{$\vec{a} = \left( \begin{array}{c} 2 \\ 4 \\ 5 \end{array} \right)$}
+			\uncover<6->{$\vec{b} = \left( \begin{array}{c} 6 \\ 3 \\ 0 \end{array} \right)$\\}
+			\ \\\uncover<6->{$c = 2 \cdot 6 + 4 \cdot 3 + 5 \cdot 0 = 12 + 12 + 0 = 24$\\}
+			\ \\\uncover<7->{$\sphericalangle ( \vec{a}, \vec{b} )$}
+			\uncover<8->{$ = \cos^{-1} \left( \dfrac{24}{\sqrt{2^2 + 4^2 + 5^2} \cdot \sqrt{6^2 + 3^2}}  \right)$}
+			\ \\\ \\\uncover<9->{$\sphericalangle ( \vec{a}, \vec{b} ) = \cos^{-1} \left( \dfrac{24}{\sqrt{45} \cdot \sqrt{45}}  \right)$}
+			\uncover<10->{$ = \cos^{-1} \left( \dfrac{24}{45}  \right)$}
+			\ \\\ \\\uncover<11->{$\sphericalangle ( \vec{a}, \vec{b} ) = 57,769\degree$}
+		\end{columns}
+	\end{frame}
+	\begin{frame}{Aufgaben}
+		$\vec{p} = \left( \begin{array}{c} 2 \\ 7 \\ 5 \end{array} \right)$
+		$\vec{q} = \left( \begin{array}{c} 16 \\ 8 \\ -5 \end{array} \right)$
+		$\vec{r} = \left( \begin{array}{c} 4 \\ 3 \\ 10 \end{array} \right)$
+		$\vec{s} = \left( \begin{array}{c} \frac{1}{4} \\ \frac{1}{2} \\ 4 \end{array} \right)$\\\ \\
+		\begin{columns}[t]
+			\column{.5\textwidth}
+			Berechnen Sie.
+			\begin{itemize}
+				\item $ \vec{p} \cdot \vec{q} = $
+				\uncover<2->{$63$}
+				\item $ \vec{q} \cdot \vec{r} = $
+				\uncover<2->{$38$}
+				\item $ \vec{r} \cdot \vec{s} = $
+				\uncover<2->{$42,5$}
+				\item $ 5 \left(\vec{q} \cdot \vec{r} \right) = $
+				\uncover<2->{$190$}
+				\item $ 5\vec{r} \cdot \vec{q} = $
+				\uncover<2->{$190$}
+				\item $ 20 \vec{q} \cdot 20 \vec{r} = $
+				\uncover<2->{$400 \left( \vec{q} \cdot \vec{r} \right) = 15200$}
+				\item $ 100 \vec{q} \cdot 20 \vec{r} = $
+				\uncover<2->{$20 \left( 5\vec{q} \cdot \vec{r} \right) = 190$}
+			\end{itemize}
+			\column{.5\textwidth}
+			Stehen die folgenden Vektorpaare senkrecht zueinander?
+			\begin{itemize}
+				\item $\vec{p}, \vec{r}$
+				\color{red}
+				\uncover<2->x
+				\color{black}
+				\item $\vec{q}, \vec{s}$
+				\color{green}
+				\uncover<2->\checkmark
+				\color{black}
+				\item $\vec{p}, \vec{s}$
+				\color{red}
+				\uncover<2->x
+				\color{black}
+			\end{itemize}
+			Berechnen Sie.
+			\begin{itemize}
+				\item $\sphericalangle ( \vec{p}, \vec{q} ) \approx$
+				\uncover<2->{$67,415\degree$}
+				\item $\sphericalangle ( \vec{p}, \vec{r} ) \approx$
+				\uncover<2->{$42,328\degree$}
+				\item $\sphericalangle ( \vec{r}, \vec{s} ) \approx$
+				\uncover<2->{$19,638\degree$}
+			\end{itemize}
+		\end{columns}
 	\end{frame}
 	\lastslide
 	\maketitle
 	\section{Vektorprodukt / Kreuzprodukt}
 	\begin{frame}{Berechnung}
-		
-	\end{frame}	
-	\subsection{Eigenschaften}
-	\begin{frame}{Eigenschaften}
 		
 	\end{frame}
 	\subsection{Flächeninhalt von Parallelogrammen / Dreiecken}

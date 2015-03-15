@@ -77,14 +77,16 @@
 		\end{frame}
 	}
 \AtBeginSection[]{
-		\begin{frame}{Analytische Geometrie - Vektoroperationen}
+		\begin{frame}{Analytische Geometrie - Vektoren}
+			\small
 			\tableofcontents[currentsection]
 		\end{frame}
 	}
 
 \begin{document}
 	\maketitle
-	\begin{frame}{Analytische Geometrie - Vektoroperationen}
+	\begin{frame}{Analytische Geometrie - Vektoren}
+		\small
 		\tableofcontents
 	\end{frame}
 	\section{Null-, Einheits-, Gegenvektor, Kartesisches Koordinatensystem}
@@ -99,7 +101,7 @@
 		\uncover<4-> {$\vec{z} = \left( \begin{array}{c} 0 \\ 0 \\ 1 \end{array} \right)$}\\
 		\ \\\textbf{Gegenvektor zu $\vec{a}$:}
 		\uncover<5->{$-\vec{a}$}\\
-		\ \\\textbf{Kartesisches Koordinatensystem\uncover<1-6>{:}}\uncover<6->{(auch Orthonormiertes)\textbf{:}}\\
+		\ \\\textbf{Kartesisches Koordinatensystem\uncover<1-5>{:}}\uncover<6->{(auch Orthonormiertes)\textbf{:}}\\
 		\uncover<7->{Koordinatensystem $(O,\vec{x},\vec{y},\vec{z})$ mit}\\
 		
 		\begin{itemize}
@@ -226,8 +228,9 @@
 	\end{frame}
 	\lastslide
 	\maketitle
-	\section{Kollinearität}
+	\section{Kollinearität, Parallellität}
 	\begin{frame}{Kollinearität}
+		\small
 		\begin{columns}[T]
 			\column{.5\textwidth}
 			\begin{tikzpicture}[z=-.5cm]
@@ -250,6 +253,8 @@
 			
 			\column{.5\textwidth}
 			\uncover<4->{$\vec{v}_1, \vec{v}_2$ \textbf{kollinear}, wenn $\vec{v}_1 + r\cdot\vec{v}_2 = \vec{o}$}\\
+			\uncover<12->{\textbf{parallel}, wenn $r > 0$}\\
+			\uncover<13->{\textbf{antiparallel}, wenn $r < 0$}\\
 			\ \\\uncover<5->{$\left( \begin{array}{c} x_1 \\ y_1 \\ z_1 \end{array} \right) + \left( \begin{array}{c} r \cdot x_2 \\ r \cdot y_2 \\ r \cdot z_2 \end{array} \right) = \vec{o}$}\\
 			\ \\\uncover<6->{$\left( \begin{array}{c} x_1 + r \cdot x_2 \\ y_1 + r \cdot y_2 \\ z_1 + r \cdot z_2 \end{array} \right) = \left( \begin{array}{c} 0 \\ 0 \\ 0 \end{array} \right)$}\\
 			\ \\\uncover<7->{$\left( \begin{array}{c} 3 + r \cdot (-1,5) \\ 6 + r \cdot (-3) \\ 1 + r \cdot (-0,5) \end{array} \right) = \left( \begin{array}{c} 0 \\ 0 \\ 0 \end{array} \right)$}\\
@@ -258,22 +263,22 @@
 		\end{columns}
 	\end{frame}
 	\begin{frame}{Aufgaben}
-		Untersuchen Sie folgende Vektorpaare auf Kollinearität.
+		Untersuchen Sie folgende Vektorpaare auf Kollinearität und parallellität.
 		\begin{columns}
 			\column{.5\textwidth}
 			\begin{itemize}
 				\item $\vec{a} = \left( \begin{array}{c} 3 \\ 6 \\ 1 \end{array} \right) \vec{b} = \left( \begin{array}{c} -1,5 \\ -3 \\ -0,5 \end{array} \right)$
 				\color{green}
-				\uncover<2->\checkmark
+				\uncover<2->{\checkmark, a}
 				\color{black}
 				\item $\vec{c} = \left( \begin{array}{c} 5 \\ 0 \\ 2 \end{array} \right) \vec{d} = \left( \begin{array}{c} 7 \\ 4 \\ 2 \end{array} \right)$
 				\item $\vec{e} = \left( \begin{array}{c} 8 \\ 4 \\ 2 \end{array} \right) \vec{f} = \left( \begin{array}{c} 16 \\ 8 \\ 4 \end{array} \right)$
 				\color{green}
-				\uncover<2->\checkmark
+				\uncover<2->{\checkmark, p}
 				\color{black}
 				\item $\vec{g} = \left( \begin{array}{c} 9 \\ 27 \\ 6 \end{array} \right) \vec{h} = \left( \begin{array}{c} -1 \\ -3 \\ -\frac{1}{3} \end{array} \right)$
 				\color{green}
-				\uncover<2->\checkmark
+				\uncover<2->{\checkmark, a}
 				\color{black}
 			\end{itemize}
 			\column{.6\textwidth}
@@ -281,17 +286,17 @@
 				\item $\vec{j} = \left( \begin{array}{c} 4 \\ 28 \\ 1 \end{array} \right) \vec{k} = \left( \begin{array}{c} -1 \\ 7 \\ -0,25 \end{array} \right)$
 				\item $\vec{l} = \left( \begin{array}{c} 6 \\ 6 \\ 6 \end{array} \right) \vec{m} = \left( \begin{array}{c} 6 \\ 6 \\ 6 \end{array} \right)$
 				\color{green}
-				\uncover<2->\checkmark
+				\uncover<2->{\checkmark, p}
 				\color{black}
 				\item $\vec{o} = \left( \begin{array}{c} 3 \\ 5 \\ \sqrt{2} \end{array} \right) \vec{p} = \left( \begin{array}{c} 9 \\ 25 \\ 2 \end{array} \right)$
 				\item $\vec{q} = \left( \begin{array}{c} 9k \\ 81 \\ 18 \end{array} \right) \vec{r} = \left( \begin{array}{c} -k \\ -9 \\  -2 \end{array} \right)$
 				\color{green}
-				\uncover<2->\checkmark
+				\uncover<2->{\checkmark, a}
 				\color{black}
 			\end{itemize}
 		\end{columns}
 	\end{frame}
-	\section{Linearkombination, Lineare (Un)Abhängigkeit}
+	\section{Linearkombination, Lineare (Un)Abhängigkeit, Komplanarität}
 	\begin{frame}{Linearkombination}
 		\uncover<2->{$\vec{d}$ heißt \textbf{Linearkombination} von $\vec{a}, \vec{b}, \vec{c}$, wenn $\exists r,s,t \in\mathbb{R}$, sodass gilt:}\\
 		\uncover<2->{$\vec{d} = r \cdot \vec{a} + s \cdot \vec{b} + t \cdot \vec{c}$}\\
@@ -328,25 +333,69 @@
 		\uncover<9->{$\rightarrow\left( \begin{array}{ccc|c} 1 & 3 & 2 & 2 \\ 0 & -5 & 8 & -3 \\ 0 & 0 & -\frac{131}{5} & -\frac{9}{5} \end{array} \right)$}\\
 		\uncover<10->{$\rightarrow \dots \rightarrow \left( \begin{array}{ccc|c} 1 & 0 & 0 & -\frac{35}{131} \\ 0 & 1 & 0 & \frac{93}{131} \\ 0 & 0 & 1 & \frac{9}{131} \end{array} \right)$}
 	\end{frame}
-	\begin{frame}{Lineare (Un)Abhängigkeit}
+	\begin{frame}{Lineare (Un)Abhängigkeit, Komplanarität}
+		\small
 		\uncover<2->{$\vec{a}, \vec{b}, \vec{c}$ heißen \textbf{Linear unabhängig}, wenn $\exists r,s,t \in\mathbb{R}$, sodass}\\
-		\uncover<2->{$r \cdot \vec{a} + s \cdot \vec{b} + t \cdot \vec{c} = \vec{o}$ nur für $r = s = t = 0$ lösbar ist.}\\
-		\ \\\uncover<3->{\textbf{ODER}:}\\
-		\ \\\uncover<3->{Keiner der Vektoren lässt sich als Linearkombination der übrigen darstellen.}\\
-		\ \\\uncover<4->{zu Prüfen:}
-		\begin{itemize}
-			\item<4->ist $\vec{a}$ Linearkombination von $\vec{b}, \vec{c}$?
-			\item<4->ist $\vec{b}$ Linearkombination von $\vec{c}, \vec{a}$?
-			\item<4->ist $\vec{c}$ Linearkombination von $\vec{a}, \vec{b}$?
-		\end{itemize}
-		\ \\\ \\\uncover<5->{Anderenfalls heißen die Vektoren $\vec{a}, \vec{b}, \vec{c}$ \textbf{linear abhängig}.}
+		\uncover<2->{$r \cdot \vec{a} + s \cdot \vec{b} + t \cdot \vec{c} = \vec{o}$ nur für $r = s = t = 0$ lösbar ist.}\\\ \\
+		\uncover<3->{\textbf{Gleichungssystem:}}
+		\uncover<3->{
+			$\left( \begin{array}{ccc|c}
+				x_a & x_b & x_c & 0 \\
+				y_a & y_b & y_c & 0 \\
+				z_a & z_b & z_c & 0
+			\end{array} \right)$
+		}
+		\uncover<4->{
+			$\rightarrow \dots \rightarrow \left( \begin{array}{ccc|c}
+				. & . & . & 0 \\
+				0 & . & . & 0 \\
+				0 & 0 & . & 0
+			\end{array} \right)$
+		}\\
+		\ \\\uncover<5->{Anderenfalls heißen die Vektoren $\vec{a}, \vec{b}, \vec{c}$ \textbf{linear abhängig} bzw. \textbf{komplanar}.}\\
+		\ \\\uncover<6->{$\vec{a}, \vec{b}, \vec{c}$ heißen \textbf{Linear abhängig} bzw. \textbf{komplanar}, wenn sich einer der Vektoren durch Linearkombination der anderen darstellen lässt.}\\\ \\
+		\uncover<7->{\textbf{Beispiel}:
+		$\vec{a} = \left( \begin{array}{c} 4 \\ 4 \\ 4 \end{array} \right)$
+		$\vec{b} = \left( \begin{array}{c} 5 \\ 2 \\ 1 \end{array} \right)$
+		$\vec{c} = \left( \begin{array}{c} 5 \\ 1 \\ 8 \end{array} \right)$
+		\\\ \\
+		}
+		\uncover<8->{
+			$\left( \begin{array}{ccc|c}
+				4 & 5 & 5 & 0 \\
+				4 & 2 & 1 & 0 \\
+				4 & 1 & 8 & 0
+			\end{array} \right)$
+		}
+		\uncover<9->{
+			$\begin{array}{l}
+				\\
+				-I\\
+				-II
+			\end{array} \rightarrow \left( \begin{array}{ccc|c}
+				4 & 5 & 5 & 0 \\
+				0 & -3 & -4 & 0 \\
+				0 & -1 & -7 & 0
+			\end{array} \right)$
+		}
+		\uncover<10->{
+			$\begin{array}{l}
+				\\
+				\\
+				\cdot3 - II
+			\end{array} \rightarrow \left( \begin{array}{ccc|c}
+				4 & 5 & 5 & 0 \\
+				0 & -3 & -4 & 0 \\
+				0 & 0 & -17 & 0
+			\end{array} \right)$
+		}
 	\end{frame}
 	\begin{frame}{Aufgaben}
 		$\vec{q} = \left( \begin{array}{c} 4 \\ 3 \\ 7 \end{array} \right)$
 		$\vec{r} = \left( \begin{array}{c} 550 \\ 620 \\ 150 \end{array} \right)$
 		$\vec{s} = \left( \begin{array}{c} 5 \\ 1 \\ 0 \end{array} \right)$
 		$\vec{t} = \left( \begin{array}{c} 3 \\ 4 \\ 1 \end{array} \right)$\\
-		\ \\
+		\ \\\ \\
 		\begin{columns}[T]
 			\column{0.5\textwidth}
 			Sind $\vec{q}, \vec{r}, \vec{s}$ linear unabhängig?
@@ -484,16 +533,173 @@
 	\lastslide
 	\maketitle
 	\section{Vektorprodukt / Kreuzprodukt}
-	\begin{frame}{Berechnung}
-		
+	\begin{frame}{Vektorprodukt - Berechnung}
+		\begin{tikzpicture}
+			\begin{uncoverenv}<2->			
+				\node[right] at (0,0){$\vec{a}\times\vec{b} =
+				\begin{array}{c}
+					\left(\begin{array}{c}
+						\textcolor<7-8>{red}{\textcolor<6>{blue}{x_a}} \\
+						\textcolor<8>{blue}{\textcolor<3-4>{red}{y_a}} \\
+						\textcolor<5-6>{red}{\textcolor<4>{blue}{z_a}}
+					\end{array}\right)
+					\only<10->{\\\textcolor{gray}{x_a}}
+				\end{array} \times \begin{array}{c}
+					\left(\begin{array}{c}
+						\textcolor<8>{blue}{\textcolor<5-6>{red}{x_b}} \\
+						\textcolor<7-8>{red}{\textcolor<4>{blue}{y_b}} \\
+						\textcolor<6>{blue}{\textcolor<3-4>{red}{z_b}}
+					\end{array}\right)
+					\only<10->{\\\textcolor{gray}{x_b}}
+				\end{array} = \left(\begin{array}{c}
+					\textcolor<3-4>{red}{y_az_b} - \textcolor<4>{blue}{z_ay_b} \\
+					\textcolor<5-6>{red}{z_ax_b} - \textcolor<6>{blue}{x_az_b} \\
+					\textcolor<7-8>{red}{x_ay_b} - \textcolor<8>{blue}{y_ax_b}
+				\end{array}\right)$};
+			\end{uncoverenv}
+			
+			\begin{uncoverenv}<11->
+				\draw[teal] (2.7,.25) -- (4.3,-.25);
+				\draw[teal] (2.7,.-.25) -- (4.3,.25);
+				
+				\fill[white] (3.5,0) circle [radius=.2cm];
+				\node[font=\large] at (3.55,0) {1.};
+			\end{uncoverenv}
+			
+			\begin{uncoverenv}<12->
+				\draw[red] (2.7,-.25) -- (4.3,-.75);
+				\draw[red] (2.7,.-.75) -- (4.3,-.25);
+				
+				\fill[white] (3.5,-.5) circle [radius=.2cm];
+				\node[font=\large] at (3.55,-.5) {2.};
+			\end{uncoverenv}
+			
+			\begin{uncoverenv}<13->
+				\draw[orange] (2.7,.75) -- (4.3,.25);
+				\draw[orange] (2.7,.25) -- (4.3,.75);
+				
+				\fill[white] (3.5,.5) circle [radius=.2cm];
+				\node[font=\large] at (3.55,.5) {3.};
+			\end{uncoverenv}
+		\end{tikzpicture}\ \\
+		\begin{columns}[T]
+			\column{.6\textwidth}
+			\uncover<14->{$\vec{a} \times \vec{b}$ ist ein Vektor $\vec{c}$ für den gilt:}
+			\begin{itemize}[<+(14)->]
+				\item $\left|\vec{c}\right| = |\vec{a}||\vec{b}|sin\sphericalangle(\vec{a},\vec{b})$
+				\item $\vec{c}\bot\vec{a}$ und $\vec{c}\bot\vec{b}$
+				\item $\vec{a}, \vec{b}$ und $\vec{c}$ bilden in dieser Reihenfolge ein Rechtssystem (falls $\vec{a}$ und $\vec{b}$ linear unabhängig)
+			\end{itemize}
+			\column{.4\textwidth}
+			\uncover<18->{\textbf{Eigenschaften}}
+			\begin{itemize}[<+(15)->]
+				\item $\vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})$
+				\item $\vec{a} \times (\vec{b} + \vec{c}) = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$
+				\item $r(\vec{a} \times \vec{b}) = (r\vec{a}) \times \vec{b} = \vec{a} \times (r\vec{b})$
+				\item $\vec{a}, \vec{b}$ kollinear $\Rightarrow \vec{a} \times \vec{b} = \vec{o}$
+			\end{itemize}
+		\end{columns}
 	\end{frame}
 	\subsection{Flächeninhalt von Parallelogrammen / Dreiecken}
-	\begin{frame}{Flächeninhalt von Parallelogrammen}
-		
+	\begin{frame}{Flächeninhalte}
+		\begin{columns}[T]
+			\column{.6\textwidth}
+			\uncover<5->{\textbf{Parallellogramm:}\\\ \\
+			\noindent\hspace*{4mm}%			
+			$A = | \vec{a} \times \vec{b} |$\\\ \\}
+			\noindent\hspace*{4mm}%		
+			\uncover<6->{$A = \left|
+			\begin{array}{c}
+				\left( \begin{array}{c}
+					5\\
+					3\\
+					2
+				\end{array} \right)\\
+				\textcolor{gray}{5}
+			\end{array}			
+			\times 
+			\begin{array}{c}
+				\left( \begin{array}{c}
+					3\\
+					2\\
+					3
+				\end{array} \right)\\
+				\textcolor{gray}{3}
+			\end{array} \right|$}
+			\uncover<7->{$ = \left| \left( \begin{array}{c} 
+				5\\
+				-9\\
+				1			
+			\end{array} \right) \right|$\\\ \\}
+			\noindent\hspace*{4mm}%		
+			\uncover<8->{$A = \sqrt{5^2+(-9)^2+1^2}$}
+			\uncover<9->{$ = \sqrt{107}$}
+			\uncover<10->{$ \approx 10,344 FE$\\\ \\}
+			\uncover<12->{\textbf{Dreieck:}\\\ \\
+			\noindent\hspace*{4mm}%		
+			$A = \frac{| \vec{a} \times \vec{b} |}{2}$\\\ \\}
+			\noindent\hspace*{4mm}%
+			\uncover<13->{$A \approx \frac{10,344}{2} \approx 5,172 FE$}
+			\column{.4\textwidth}
+			\centering
+			$\vec{a} = \left( \begin{array}{c}
+				5\\
+				3\\
+				2
+			\end{array} \right)$
+			$\ \ \ \vec{b} = \left( \begin{array}{c}
+				3\\
+				2\\
+				3
+			\end{array} \right)$\\\ \\\ \\
+			\begin{tikzpicture}
+			
+				\fill<4->[blue, opacity=.2] (0,0,0) -- (3,2,5) -- (5,5,8) -- (2,3,3);
+				\fill<11->[red, opacity=.2] (0,0,0) -- (3,2,5) -- (2,3,3);
+				\begin{uncoverenv}<2->
+					\draw[red,->] (0,0,0) -- (3,2,5) node[below] {$\vec{a}$};
+					\draw[blue,->] (0,0,0) -- (2,3,3) node[above] {$\vec{b}$};
+				\end{uncoverenv}
+				\begin{uncoverenv}<3->
+					\draw[opacity=.5,dotted,red,->] (2,3,3) -- (5,5,8) node[above] {$\vec{a}$};
+					\draw[opacity=.5,dotted,blue,->] (3,2,5) -- (5,5,8) node[below] {$\vec{b}$};
+				\end{uncoverenv}
+				\begin{uncoverenv}<11->
+					\draw[dashed] (3,2,5) -- (2,3,3);
+				\end{uncoverenv}
+			\end{tikzpicture}
+		\end{columns}
 	\end{frame}
-	\subsection{Flächeninhalt von Dreiecken}
-	\begin{frame}{Flächeninhalt von Dreiecken}
-		
+	\begin{frame}{Aufgaben}
+		$\vec{q} = \left( \begin{array}{c}
+			1\\
+			2\\
+			4
+		\end{array} \right)
+		\vec{r} = \left( \begin{array}{c}
+			5\\
+			8\\
+			6
+		\end{array} \right)
+		\vec{s} = \left( \begin{array}{c}
+			6\\
+			6\\
+			6
+		\end{array} \right)
+		\vec{t} = \left( \begin{array}{c}
+			4\\
+			2\\
+			13
+		\end{array} \right)$\\\ \\
+		Berechnen Sie die Flächeninhalte der von den Vektoren aufgespannten Parallelogrammen und Dreiecke.\\\ \\
+		\begin{itemize}
+			\item $\vec{q},\vec{r}$ \uncover<2->{\textcolor{orange}{$\ \ \ A_\diamondsuit \approx 24,495FE$}\textcolor{lightblue}{$\ \ \ A_\triangle \approx 12,247FE$}}
+			\item $\vec{r},\vec{s}$ \uncover<2->{\textcolor{orange}{$\ \ \ A_\diamondsuit \approx 22,450FE$}\textcolor{lightblue}{$\ \ \ A_\triangle \approx 11,225FE$}}
+			\item $\vec{s},\vec{t}$ \uncover<2->{\textcolor{orange}{$\ \ \ A_\diamondsuit \approx 86,116FE$}\textcolor{lightblue}{$\ \ \ A_\triangle \approx 43,058FE$}}
+			\item $\vec{t},\vec{q}$ \uncover<2->{\textcolor{orange}{$\ \ \ A_\diamondsuit \approx 19,209FE$}\textcolor{lightblue}{$\ \ \ A_\triangle \approx 9,605FE$}}
+			\item $\vec{q},\vec{s}$ \uncover<2->{\textcolor{orange}{$\ \ \ A_\diamondsuit \approx 22,450FE$}\textcolor{lightblue}{$\ \ \ A_\triangle \approx 11,225FE$}}
+			\item $\vec{r},\vec{t}$ \uncover<2->{\textcolor{orange}{$\ \ \ A_\diamondsuit \approx 103,097FE$}\textcolor{lightblue}{$\ \ \ A_\triangle \approx 51,549FE$}}
+		\end{itemize}
 	\end{frame}
 	\lastslide
 	\maketitle

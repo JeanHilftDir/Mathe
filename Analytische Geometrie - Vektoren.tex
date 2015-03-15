@@ -704,13 +704,114 @@
 	\lastslide
 	\maketitle
 	\section{Spatprodukt}
-	\subsection{Spat? WTF?}
 	\begin{frame}{Spat? WTF?}
+		\begin{tikzpicture}
+			\draw[teal,->] (0,0,0) -- (5,0,0) node[below] {a};
+			\draw[green,->] (0,0,0) -- (6,4,8) node[below] {b};
+			\draw[blue,->] (0,0,0) -- (-2,-1,-9) node[above] {c};
+			\begin{uncoverenv}<2->
+				\draw[dashed, opacity=.5,teal,->] (6,4,8) -- (11,4,8);
+				\draw[dashed, opacity=.5,green,->] (-2,-1,-9) -- (4,3,-1);
+				\draw[dashed, opacity=.5,blue,->] (5,0,0) -- (3,-1,-9);
+				
+				\draw[dashed, opacity=.5,teal,->] (-2,-1,-9) -- (3,-1,-9);
+				\draw[dashed, opacity=.5,green,->] (5,0,0) -- (11,4,8);
+				\draw[dashed, opacity=.5,blue,->] (6,4,8) -- (4,3,-1);
+				
+				\draw[dashed, opacity=.5,teal,->] (4,3,-1) -- (9,3,-1);
+				\draw[dashed, opacity=.5,green,->] (3,-1,-9) -- (9,3,-1);
+				\draw[dashed, opacity=.5,blue,->] (11,4,8) -- (9,3,-1);
+			\end{uncoverenv}
+		\end{tikzpicture}\\\ \\
+		\uncover<3->{\textbf{Spatprodukt:} $(\vec{a} \times \vec{b}) \cdot \vec{c} = \vec{a} \cdot (\vec{b} \times \vec{c})$}\\\ \\
+		\uncover<4->{\textbf{Volumen eines Spates:} $V = |(\vec{a} \times \vec{b}) \cdot \vec{c}|$}\ \\\ \\
+		\uncover<5->{Sind $\vec{a},\vec{b}$ und $\vec{c}$ \textbf{komplanar}, so ist das Spatprodukt 0}
 		
 	\end{frame}
 	\subsection{Volumen eines Spates}
 	\begin{frame}{Volumen eines Spates}
-		
+		$\vec{a} = \left( \begin{array}{c}
+			0\\
+			5\\
+			0
+		\end{array} \right)
+		\vec{b} = \left( \begin{array}{c}
+			8\\
+			6\\
+			4
+		\end{array} \right)
+		\vec{c} = \left( \begin{array}{c}
+			-9\\
+			-2\\
+			-1
+		\end{array} \right)$\\\ \\\ \\
+		\uncover<2->{$V = |(\vec{a} \times \vec{b}) \cdot \vec{c}|$}
+		\uncover<3->{$ = \left| \left(
+		\begin{array}{c}
+			\left( \begin{array}{c}
+				0\\
+				5\\
+				0
+			\end{array} \right)\\
+			\textcolor{gray}{0}
+		\end{array}			
+		\times 
+		\begin{array}{c}
+			\left( \begin{array}{c}
+				8\\
+				6\\
+				4
+			\end{array} \right)\\
+			\textcolor{gray}{8}
+		\end{array} \right) \cdot \left( \begin{array}{c}
+			-9\\
+			-2\\
+			-1
+		\end{array} \right) \right|$}
+		\uncover<4->{$ = \left| \left( \begin{array}{c}
+			20\\
+			0\\
+			-40
+		\end{array} \right) \cdot \left( \begin{array}{c}
+			-9\\
+			-2\\
+			-1
+		\end{array} \right) \right|$}\\\ \\\ \\
+		\uncover<5->{$|-180 + 0 + 40|$}
+		\uncover<6->{$ = |-140| = 140 VE$}
+	\end{frame}
+	\begin{frame}{Aufgaben}
+		$P(4;7;9)\ \ \ Q(-3;6;-8)\ \ \ R(-2,10,-11)$\\
+		$\vec{s} = \left( \begin{array}{c}
+			2\\
+			-4\\
+			8
+		\end{array} \right)
+		\vec{t} = \left( \begin{array}{c}
+			6\\
+			6\\
+			6
+		\end{array} \right)
+		\vec{u} = \left( \begin{array}{c}
+			1\\
+			4\\
+			-3
+		\end{array} \right)
+		\vec{v} = \left( \begin{array}{c}
+			5\\
+			k\\
+			-4
+		\end{array} \right)$\ \\\ \\
+		Berechnen Sie das Volumen der Spate, die durch die folgenden Vektoren aufgespannt werden.
+		\begin{itemize}
+			\item $\vec{s}, \vec{t}, \vec{u}$ \uncover<2->{\ \ \ \textcolor{lightblue}{$V = 36VE$}}
+			\item $\vec{s}, \vec{OP}, \vec{u}$ \uncover<2->{\ \ \ \textcolor{lightblue}{$V = 126VE$}}
+			\item $\vec{PQ}, \vec{QR}, \vec{RP}$ \uncover<2->{\ \ \ \textcolor{lightblue}{$V = 0$}}
+			\item $\vec{PQ}, \vec{OQ}, \vec{RP}$ \uncover<2->{\ \ \ \textcolor{lightblue}{$V = 225VE$}}
+			\item $\vec{QR}, \vec{s}, \vec{OP}$ \uncover<2->{\ \ \ \textcolor{lightblue}{$V = 0$}}
+			\item $\vec{s} + \vec{t}, \vec{s}, \vec{PQ}$ \uncover<2->{\ \ \ \textcolor{lightblue}{$V = 144VE$}}
+			\item $\vec{t}, \vec{u}, \vec{v}$ \uncover<2->{\ \ \ \textcolor{lightblue}{$V = 24kVE - 282VE$}}
+		\end{itemize}
 	\end{frame}
 	\lastslide
 \end{document}
